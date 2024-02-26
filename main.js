@@ -50,6 +50,12 @@ if(rulesButton) {
 document.addEventListener('DOMContentLoaded' , () => {
     const gameToLoad = window.location.pathname.slice(1);
 
+    const p = document.createElement("p");
+
+    p.textContent = gameToLoad;
+
+    document.body.append(p)
+
     switch (gameToLoad) {
         case 'memory-game':
             memoryGameLogic();
