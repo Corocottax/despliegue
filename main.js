@@ -54,6 +54,8 @@ document.addEventListener('DOMContentLoaded' , () => {
 
     p.textContent = gameToLoad;
 
+    console.log(gameToLoad);
+
     document.body.append(p)
 
     switch (gameToLoad) {
