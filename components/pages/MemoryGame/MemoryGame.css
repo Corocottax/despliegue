@@ -1,0 +1,70 @@
+.memory-game-container {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.memory-game-container .memory-game-card-container {
+    display: grid;
+    grid-gap: var(--gap-m);
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    margin-top: var(--margin-l);
+    justify-content: center;
+}
+
+.memory-game-container .memory-game-navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.memory-game-container .memory-game-navbar .timer {
+    color: var(--white-color);
+    background-color: var(--tertiary-color);
+    padding: var(--padding-xs);
+    width: max-content;
+    border-radius: var(--border-radius-xs);
+}
+
+.memory-game-container .memory-game-navbar .win-message {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-size: var(--font-size-l);
+}
+
+.memory-game-container .card-container .inner-card {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.memory-game-container .card-container.is-flipped .inner-card {
+    transform: rotateY(180deg);
+}
+
+.memory-game-container .card-container .inner-card .front-card, .memory-game-container .card-container .inner-card  .back-card {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden
+}
+
+
+.memory-game-container .card-container .inner-card  .back-card {
+    transform: rotateY(180deg);
+}
+
+
+.memory-game-container .card-container {
+    width: 100%;
+    height: 200px;
+}   
+
+.memory-game-container .card-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: var(--border-radius-xs);
+}

@@ -1,0 +1,102 @@
+.ttt-container {
+    color: var(--white-color);
+    margin: 0 auto;
+    width: 80%;
+}
+
+.ttt-container .ttt-header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: var(--gap-s);
+}
+
+.ttt-container .ttt-header .players-container {
+    display: flex;
+    gap: var(--gap-m);
+}
+
+.ttt-container .ttt-header h4 {
+    font-size: var(--font-size-m);
+    text-transform: uppercase;
+}
+
+.ttt-container .ttt-header .player-container {
+    width: 70px;
+    height: 70px;
+    background-color: var(--black-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--border-radius-s);
+    font-size: var(--font-size-xl);
+    cursor: pointer;
+    font-weight: var(--font-weight-bold);
+}
+
+.ttt-container .ttt-header .player-container.o-player {
+    color: var(--primary-color);
+}
+
+.ttt-container .ttt-header .player-container.x-player {
+    color: var(--secondary-color);
+}
+
+.ttt-container .ttt-grid-container {
+    margin-top: var(--margin-m);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 150px));
+    grid-template-rows: repeat(3, minmax(100px, 150px));
+    grid-gap: var(--gap-s);
+    justify-content: center;
+}
+
+.ttt-container .ttt-grid-container .ttt-cell {
+    background-color: var(--black-color);
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-l);
+    box-shadow: 0 4px 8px rgba(124, 119, 119, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--font-size-xxl);
+}
+
+.active-player-x {
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.active-player-o {
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.ttt-container .ttt-grid-container .result-container {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 560px;
+    margin-top: var(--margin-l);
+    padding: var(--padding-m) var(--padding-s);
+    border-radius: var(--border-radius-xs) var(--border-radius-xs) 0 0;
+}
+
+.ttt-container .ttt-grid-container .result-container .btn-restart {
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: var(--font-size-s);
+    border-bottom: 1px solid var(--white-color);
+    margin-top: var(--margin-s);
+    cursor: pointer;
+}
+
+@media( max-width: 560px) {
+    .ttt-container .ttt-grid-container .result-container {
+        width: 100%;
+    }
+}

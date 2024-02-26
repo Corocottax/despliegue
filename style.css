@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Offside&family=Press+Start+2P&display=swap');
+
+:root {
+    --font-family-headings: 'Press Start 2P';
+    --font-family-text: 'Offside';
+
+    --primary-color: #D86E96;
+    --secondary-color: #4DA3C2;
+    --tertiary-color: #66AD83;
+    --white-color: #E6EDED;
+    --black-color: #131B1C;
+
+    --font-size-xs: 12px;
+    --font-size-s: 16px;
+    --font-size-m: 18px;
+    --font-size-l: 24px;
+    --font-size-xl: 32px;
+    --font-size-xxl: 64px;
+  
+    --font-weight-regular: 400;
+    --font-weight-semi-bold: 600;
+    --font-weight-bold: 700;
+  
+    --spacing-xs: 0.5rem;
+    --spacing-s: 1rem;
+    --spacing-m: 2rem;
+    --spacing-l: 3rem;
+    --spacing-xl: 4rem;
+    --spacing-xxl: 6rem;
+    
+    --margin-xs : var(--spacing-xs);
+    --margin-s : var(--spacing-s);
+    --margin-m : var(--spacing-m);
+    --margin-l : var(--spacing-l);
+    --margin-xl : var(--spacing-xl);
+    
+    --padding-xs : var(--spacing-xs);
+    --padding-s : var(--spacing-s);
+    --padding-m : var(--spacing-m);
+    --padding-l : var(--spacing-l);
+    --padding-xl : var(--spacing-xl);
+    --padding-xxl : var(--spacing-xxl);
+    
+    --gap-xs : var(--spacing-xs);
+    --gap-s : var(--spacing-s);
+    --gap-m : var(--spacing-m);
+    --gap-l : var(--spacing-l);
+    --gap-xl : var(--spacing-xl);
+    
+    --border-radius-xs: 4px;
+    --border-radius-s: 8px;
+    --border-radius-l: 16px;
+
+    --header-height: 97px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-family: var(--font-family-text);
+    background: url('https://res.cloudinary.com/dmrv2bogq/image/upload/v1703022109/games-hub/background-games-hub_cwdera.png') rgba(19, 27, 28, 0.7);
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+    list-style: none;
+}

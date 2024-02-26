@@ -1,0 +1,7 @@
+.wrapper-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: var(--padding-m);
+    gap: var(--gap-l);
+}

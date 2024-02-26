@@ -1,0 +1,40 @@
+header {
+    padding: var(--padding-m) var(--padding-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap-m)
+}
+
+header h1 {
+    font-family: var(--font-family-headings);
+    text-transform: uppercase;
+    color: var(--primary-color);
+    flex: 1;
+    text-align: center;
+    font-size: clamp(var(--font-size-l), 3vw, var(--font-size-l));
+    width: 100%;
+}
+
+@media ( max-width: 1000px ) {
+
+}
+
+@media ( max-width: 700px) {
+    header {
+        padding: var(--padding-m) var(--padding-s);
+        flex-direction: column;
+    }
+
+    header h1 {
+        order: 1;
+    }
+
+    header .btn-back {
+        order: 2;
+    }
+
+    header .btn-rules {
+        order: 3;
+    }
+}

@@ -1,0 +1,71 @@
+.wordle-container {
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    gap: var(--gap-m);
+    padding: var(--padding-m);
+    min-width: 250px;
+    max-width: min(500px, 58vh, 100%);
+    position: relative;
+}
+
+#guess-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xs);
+    color: var(--white-color);    
+}
+
+#guess-form input {
+    border: 1px solid var(--black-color);
+    background-color: var(--white-color);
+    border-radius: var(--border-radius-xs);
+    padding: var(--padding-s);
+    text-transform: uppercase;
+}
+
+.row {
+    display: flex;
+    gap: var(--gap-xs);
+    margin-bottom: var(--margin-xs)
+}
+
+.cell {
+    width: 20%;
+    display: grid;
+    place-content: center;
+    aspect-ratio: 1 / 1;
+    border: 2px solid var(--white-color);
+    background-color: var(--white-color);
+    font-size: var(--font-size-l);
+}
+
+.msg-container {
+    color: var(--white-color);
+    padding: var(--padding-m);
+    border-radius: var(--border-radius-xs) var(--border-radius-xs) 0 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.win-msg-container {
+    background-color: var(--tertiary-color);
+}
+
+.lost-msg-container {
+    background-color: var(--primary-color);
+}
+
+.msg-container button {
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    margin-top: var(--margin-s);
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: inherit;
+    width: 100%;
+    cursor: pointer;
+}

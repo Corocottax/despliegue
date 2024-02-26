@@ -1,0 +1,112 @@
+.trivial-game-container {
+    width: 500px;
+    margin: var(--margin-l) auto;
+}
+
+.trivial-game-container .trivial-game-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--white-color);
+}
+
+.trivial-game-container .trivial-game-header .btn-start {
+    width: 100%;
+}
+
+.trivial-game-container .trivial-game-header .box {
+    padding: var(--padding-xs);
+    border-radius: var(--border-radius-xs);
+    display: none;
+}
+
+.trivial-game-container .trivial-game-header .timer {
+    background-color: var(--primary-color);
+}
+
+.trivial-game-container .trivial-game-header .score {
+    background-color: var(--tertiary-color);
+}
+
+.trivial-game-container .trivial-game-header .number-questions {
+    background-color: var(--secondary-color);
+}
+
+.trivial-game-container .trivial-game-main {
+    margin-top: var(--margin-xl);
+    display: none;
+    gap: var(--gap-l);
+}
+
+.trivial-game-container .trivial-game-main .question-card {
+    background-image: url('https://res.cloudinary.com/dmrv2bogq/image/upload/v1704652138/games-hub/question_ff0vir.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: var(--border-radius-s);
+    text-align: center;
+    color: var(--white-color);
+    padding: var(--padding-m) var(--padding-l);
+    height: 550px;
+    flex: 1 0 100%;
+    display: none;
+}
+
+.trivial-game-container .trivial-game-main .question-card.active {
+    display: block;
+    animation: slideInFromRight 1s ease-in-out;
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.trivial-game-container .trivial-game-main .question-card h4 {
+    text-transform: uppercase;
+    padding-bottom: var(--padding-xs);
+    border-bottom: 1px solid var(--white-color);
+    font-size: var(--font-size-m);
+}
+
+.trivial-game-container .trivial-game-main .question-card .question-card-body .answers-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-l);
+    margin-top: var(--margin-l);
+}
+
+.trivial-game-container .trivial-game-main .question-card .question-card-body .answers-list li {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: var(--padding-s) var(--padding-xs);
+    border-radius: var(--border-radius-s);
+    cursor: pointer; 
+}
+
+.trivial-game-container .trivial-game-main .question-card .question-card-body .answers-list li.correct-answer {
+    background-color: var(--tertiary-color);
+}
+
+.trivial-game-container .trivial-game-main .question-card .question-card-body .answers-list li.wrong-answer {
+    background-color: var(--primary-color);
+}
+
+.trivial-game-winner {
+    color: var(--white-color);
+    margin-top: var(--margin-s);
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-m)
+}
+
+@media( max-width: 500px) {
+    .trivial-game-container {
+        width: 100%;
+    }
+}

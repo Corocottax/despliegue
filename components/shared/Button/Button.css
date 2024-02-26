@@ -1,0 +1,26 @@
+.btn {
+    border: none;
+    padding: var(--padding-xs);
+    font-family: inherit;
+    text-transform: uppercase;
+    border-radius: var(--border-radius-xs);
+    
+    color: var(--white-color);
+    cursor: pointer;
+}
+
+.btn-back {
+    background-color: var(--secondary-color);
+}
+
+.btn-rules {
+    background-color: var(--tertiary-color);
+}
+
+.btn-play-again {
+    background-color: var(--primary-color);
+}
+
+.btn-start {
+    background-color: var(--tertiary-color);
+}
